@@ -1,0 +1,193 @@
+html{
+	
+	height:100%;
+}
+
+body{
+	background-color: rgb(254, 255, 254);
+	height:100%;
+	overflow-x:hidden;
+	margin:0;
+}
+
+nav{
+	font-family: 'BioRhyme Expanded', serif;
+	font-weight:bold;
+	width:100%;
+	height:auto;
+	background-color: #A2D69F;
+}
+ul{
+	font-family: 'Domine', serif;
+	font-size:15px;
+	width:inherit;
+	margin:5%;
+	width: inherit;
+}
+li{
+	/*each li contains a piece of fetched data*/
+	width:100%;
+	margin-bottom:10px;
+	padding-left:5%;
+	padding-right:5%;
+	list-style-type: none;
+}
+
+button{
+	/*says Add to Cart*/
+	background-color:rgb(254, 255, 254);
+	font-family: 'Domine', serif;
+	border-width: 1px;
+	border-radius: 10%;
+	margin-left:5px;
+	margin-bottom:5px;
+	align-items: flex-end;
+}
+
+img{
+	border-bottom-left-radius: 5%;
+	border-top-left-radius: 5%;
+	height:100%;
+	width:50%;
+}
+
+p{
+	/*holds navbar text*/
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-top:0;
+	font-size:18px;
+	margin-left:100px;
+	margin-right:10%;
+}
+.container{
+	/*holds all the cards*/
+	display:flex;
+	background-color: rgb(254, 255, 254);;
+	margin-top:20px;
+
+	margin-left:25%;
+	margin-right:25%;
+
+	height:inherit;
+	width:inherit;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.card{
+	/*each card has img and content*/
+	display:flex;
+	/*	flex-direction: row-reverse;
+	background-color: #A2D69F;*/
+	margin-right:1%;
+	margin-bottom:5px;
+	border-width: 10px;
+	border-radius:5%;
+	max-height: 200px;
+	height:auto;
+	width:49%;
+}
+
+.content{
+	/*holds the ul with the product info*/
+	display:flex;
+	border-radius:5%;
+	width:50%;
+}
+
+.name{
+	margin-bottom: 10px;
+}
+
+/*responsive layout cover 6 sizes*/
+/*1)310px and smaller for SamsungFold*/
+
+/*2)up to 480px for mobile*/
+
+/*3)up to 768px for large mobile and tabs*/
+
+/*4)up to 960px for tabs and very small desktops*/
+
+/*5)up to 1440px for tabs and medium desktops*/
+
+/*6)larger than 1440px for XL screens*/
+
+/*although responsive layout fits modern devices it is designed not around device compatibility but content*/
+@media screen and (max-width: 1440px){
+	.container{
+		margin-left:18%;
+		margin-right:18%;
+	}
+
+	.card{
+		width:49%;
+		min-height: 200px;
+		max-height: 240px;
+	}
+}
+
+@media screen and (max-width: 960px){
+	.container{
+		margin-left:14%;
+		margin-right:14%;		
+	}
+
+	.card{
+		min-height: 200px;
+		max-height: 240px;
+		margin-right: 0;
+		margin-bottom: 15px;
+		width:100%;
+	}
+}
+
+@media screen and (max-width:768px){
+	.container{
+		margin-left:10%;
+		margin-right:10%;;
+	}
+
+	.card{
+		min-height: 200px;
+		max-height: 240px;
+		margin-right: 0;
+		margin-bottom: 15px;
+		width:100%;
+	}
+}
+
+@media screen and (max-width:480px){
+	.container{
+		margin-left:5%;
+		margin-right:5%;
+/*		flex-direction: column;
+		flex-wrap: nowrap;*/
+	}
+
+	.card{
+		min-height: 200px;
+		max-height: 240px;
+		margin-right: 0;
+		margin-bottom: 15px;
+		width:100%;
+	}
+
+	p{
+		margin-left:50px;
+	}
+
+
+}
+
+@media screen and (max-width:310px){
+	ul{
+		padding-left:20px;
+	}
+
+	.card{
+		max-height: 260px;
+	}
+}
+
+
