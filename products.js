@@ -15,12 +15,11 @@ const container = document.getElementsByClassName("container")[0];
 window.addEventListener('passingData', passDataHandler)
 
 	function passDataHandler(event){
-		console.log("This is it: ")
-		console.log(event)
+		//console.log("This is it: ")
+		//console.log(event)
 	//loop through fetched data, create HTML elements and append them to container
 	event.detail.forEach(product => {
 		//console.log(product);
-		console.log("pesho")
 		item = createElems(product);
 
 		setData(product,item.ul,item.card)
