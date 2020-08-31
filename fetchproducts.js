@@ -19,9 +19,9 @@ fetch('https://gist.githubusercontent.com/Raisolution/2fa773f5b7009d4b7c487e7a0a
 	.catch(error => console.log(error))
 
 //create custom event to pass data
-function passDataEvent(){
+function passDataEvent(data){
 	let event = new CustomEvent("passingData",  {
-		detail : eval(dataArr)
+		detail : eval(data)
 	});
 	window.dispatchEvent(event);
 }
