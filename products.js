@@ -1,19 +1,27 @@
 
+
 //set a the date to 28th of July 1996
 let now = new Date();
 now.setFullYear(1996);
 now.setMonth(6);
 const _MS_PER_DAY = 1000 * 60 * 60 * 24;
 
-//setTimeout to sync fetching of data and building the page
-setTimeout( () => {
-	//get the container for the content
-	const container = document.getElementsByClassName("container")[0];
+let item;
+//get the container for the content
+const container = document.getElementsByClassName("container")[0];	
+
+
+//eventlistener to sync fetching of data and building the page
+window.addEventListener('passingData', passDataHandler)
+
+	function passDataHandler(event){
+		console.log("This is it: ")
+		console.log(event)
 	//loop through fetched data, create HTML elements and append them to container
-	dataArr.forEach(product => {
+	event.detail.forEach(product => {
 		//console.log(product);
-		
-		let item = createElems(product);
+		console.log("pesho")
+		item = createElems(product);
 
 		setData(product,item.ul,item.card)
 
@@ -26,8 +34,8 @@ setTimeout( () => {
 		//check stock and apply results visually and semantically 
 		checkStock(product, item.card, item.btn)
 	});
+}
 
-},505);
 
 //create all the major elements
 function createElems(product){
